@@ -1,0 +1,1 @@
+Bot has been reopened and rewritten.
