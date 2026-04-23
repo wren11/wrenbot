@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BlackMagic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BlackMagic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" Condition="Exists('..\..\..\..\..\Desktop\BlackMagic.1.1\BlackMagic.dll')">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Desktop\BlackMagic.1.1\BlackMagic.dll</HintPath>
     </Reference>
@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BotClient.cs" />
+    <Compile Include="Magic\BlackMagic.cs" Condition="!Exists('..\..\..\..\..\Desktop\BlackMagic.1.1\BlackMagic.dll')" />
     <Compile Include="BotForm.cs">
       <SubType>Form</SubType>
     </Compile>
